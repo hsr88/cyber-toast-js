@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberToast.js Demo</title>
+    <style>
+        body { 
+            font-family: 'Courier New', monospace; 
+            background: #050505; 
+            color: #00ff41; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            height: 100vh; 
+            gap: 20px;
+            margin: 0;
+            overflow: hidden;
+        }
+        
+        h1 { 
+            text-shadow: 0 0 10px #00ff41; 
+            margin-bottom: 40px; 
+            letter-spacing: -2px;
+        }
+
+        .btn-group { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+
+        button { 
+            padding: 15px 30px; 
+            cursor: pointer; 
+            background: rgba(0, 255, 65, 0.05);
+            border: 1px solid #00ff41; 
+            color: #00ff41;
+            font-family: inherit;
+            font-weight: bold; 
+            font-size: 14px; 
+            transition: 0.2s; 
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        button:hover { 
+            background: #00ff41; 
+            color: #000;
+            box-shadow: 0 0 20px #00ff41;
+        }
+
+        .btn-error { color: #ff0055; border-color: #ff0055; background: rgba(255, 0, 85, 0.05); }
+        .btn-error:hover { background: #ff0055; color: #000; box-shadow: 0 0 20px #ff0055; }
+
+        .btn-info { color: #00d9ff; border-color: #00d9ff; background: rgba(0, 217, 255, 0.05); }
+        .btn-info:hover { background: #00d9ff; color: #000; box-shadow: 0 0 20px #00d9ff; }
+
+        /* Tło siatki */
+        .grid-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                linear-gradient(rgba(0, 255, 65, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 65, 0.05) 1px, transparent 1px);
+            background-size: 30px 30px;
+            z-index: -1;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-bg"></div>
+
+    <h1>&lt;CyberToast.js /&gt;</h1>
+
+    <div class="btn-group">
+        <button onclick="cyber.show('System Access Granted', 'success')">INIT_SUCCESS</button>
+        <button class="btn-error" onclick="cyber.show('Critical Failure: 404', 'error')">INIT_ERROR</button>
+        <button class="btn-info" onclick="cyber.show('Uploading Virus... 99%', 'info')">UPLOAD</button>
+    </div>
+
+    <script src="../src/CyberToast.js"></script>
+
+    <script>
+        // Init
+        const cyber = new CyberToast({
+            position: 'top-right',
+            duration: 5000,
+            typingSpeed: 30 
+        });
+
+        // Welcome mess
+        setTimeout(() => {
+            cyber.show('CyberToast v1.0 loaded...', 'info');
+        }, 800);
+    </script>
+
+</body>
+</html>
