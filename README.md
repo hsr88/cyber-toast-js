@@ -8,7 +8,8 @@
 
 ## 🔗 Demo
 👉 **[Live Demo](https://hsr88.github.io/cyber-toast-js/demo/)**
-*(Link will work after enabling GitHub Pages)*
+
+![cybertoast](https://github.com/user-attachments/assets/8aac02ac-17fc-41e0-a121-aac3599e6a06)
 
 ## ✨ Features
 - **Typewriter Effect:** Text appears character by character like in a terminal.
