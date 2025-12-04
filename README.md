@@ -36,11 +36,11 @@ toaster.show('System Failure', 'error');
 toaster.show('Downloading...', 'info');
 ```
 ## 🎨 Configuration
-Option,Type,Default,Description
-
-position,String,'top-right',Corner to display toasts.
-duration,Number,4000,How long the toast stays visible (ms).
-typingSpeed,Number,30,Speed of the typewriter effect (ms).
+| Option      	| Type   	| Default     	| Description                            	|   	|
+|-------------	|--------	|-------------	|----------------------------------------	|---	|
+| position    	| String 	| 'top-right' 	| Corner to display toasts.              	|   	|
+| duration    	| Number 	| 4000        	| How long the toast stays visible (ms). 	|   	|
+| typingSpeed 	| Number 	| 30          	| Speed of the typewriter effect (ms).   	|   	|
 
 ## 👨‍💻 Author
 
